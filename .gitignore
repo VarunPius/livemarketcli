@@ -16,3 +16,6 @@ venv.bak/
 
 # Editor configurations:
 .idea/
+
+# Personal files:
+data/auth.json
