@@ -2,11 +2,11 @@ from setuptools import setup
 
 setup(
     name='LiveMarketCLITracker',
-    version="0.1",
+    version="1.0",
     author="Varun Pius Rodrigues",
     description="Application to track stock market prices on command line",
     url="https://github.com/VarunPius/livemarketcli",
-    install_requires=['Click', 'requests',],
+    install_requires=['requests','urwid'],
     packages=['lib'],
     entry_points={
         'console_scripts':['mktcli=run:main']

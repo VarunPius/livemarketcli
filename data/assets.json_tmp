@@ -1,0 +1,21 @@
+
+{
+    "MSFT":{
+        "name": "Microsoft Inc.",
+        "type": "TECH",
+        "tags": ["tech", "hardware"],
+        "shares": 5
+    },
+    "VOO":{
+        "name":"Vanguard",
+        "type": "ETF",
+        "tags":["largecap", "etf"],
+        "shares": 10
+    },
+    "BA":{
+        "name":"Boeing",
+        "type": "INDUSTRIAL",
+        "tags":["defense", "aviation", "industrial"],
+        "shares": 15
+    }
+}
