@@ -1,4 +1,4 @@
-# Apache License, Version 2.0
+Apache License, Version 2.0
 
 Copyright 2021 Varun Pius Rodrigues
 
