@@ -6,7 +6,7 @@ This application is to track live stock market prices from the convenience of a 
 # Installation
 
 # Screenshot
-![Demo](https://github.com/VarunPius)
+![Demo](https://github.com/VarunPius/livemarketcli/blob/master/docs/ScreenShot.png?raw=true "Demo")
 
 # Credits
 Boa Ho Man https://github.com/aranair https://github.com/aranair/rtscli
