@@ -45,6 +45,19 @@ def get_price(stock_data_dict):
     price_dict = {}
     for ticker, stock_data in stock_data_dict.items():
         price_dict[ticker] = {}
+        price_dict[ticker]['current_price'] = 0.0
+        price_dict[ticker]['marketState'] = stock_data['marketState']
+        if price_dict[ticker]['marketState'] == 'PRE':
+            price_dict[ticker]['current_price'] = 0.0
+        elif price_dict[ticker]['marketState'] == 'REGULAR':
+            price_dict[ticker]['current_price'] = stock_data['regularMarketPrice']
+            price_dict[ticker]['current_change'] = stock_data['regularMarketChange']
+            price_dict[ticker]['current_change_percent'] = stock_data['regularMarketChangePercent']
+        elif price_dict[ticker]['marketState'] == 'POST':
+            price_dict[ticker]['current_price'] = stock_data['postMarketPrice']
+            price_dict[ticker]['current_change'] = stock_data['postMarketChange']
+            price_dict[ticker]['current_change_percent'] = stock_data['postMarketChangePercent']
+
         price_dict[ticker]['regularMarketPreviousClose'] = stock_data['regularMarketPreviousClose']
         price_dict[ticker]['regularMarketOpen'] = stock_data['regularMarketOpen']
         price_dict[ticker]['regularMarketPrice'] = stock_data['regularMarketPrice']
@@ -53,10 +66,11 @@ def get_price(stock_data_dict):
         price_dict[ticker]['regularMarketChangePercent'] = stock_data['regularMarketChangePercent']
         price_dict[ticker]['regularMarketDayHigh'] = stock_data['regularMarketDayHigh']
         price_dict[ticker]['regularMarketDayLow'] = stock_data['regularMarketDayLow']
-        price_dict[ticker]['postMarketPrice'] = stock_data['postMarketPrice']
-        price_dict[ticker]['postMarketChange'] = stock_data['postMarketChange']
-        price_dict[ticker]['postMarketChangePercent'] = stock_data['postMarketChangePercent']
-        price_dict[ticker]['marketState'] = stock_data['postMarketChangePercent']
+
+        if price_dict[ticker]['marketState'] == 'POST':
+            price_dict[ticker]['postMarketPrice'] = stock_data['postMarketPrice']
+            price_dict[ticker]['postMarketChange'] = stock_data['postMarketChange']
+            price_dict[ticker]['postMarketChangePercent'] = stock_data['postMarketChangePercent']
 
     return price_dict
 

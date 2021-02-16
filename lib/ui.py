@@ -89,9 +89,9 @@ def format_data():
         #('headers', '% Gain \t \n'.expandtabs(8)) ]
 
     for ticker, price in price_dict.items():
-        mkt_price = price['regularMarketPrice']
-        mkt_change = price['regularMarketChange']
-        mkt_change_pct = price['regularMarketChangePercent']
+        mkt_price = price['current_price']
+        mkt_change = price['current_change']
+        mkt_change_pct = price['current_change_percent']
         #print(mkt_price, mkt_change, mkt_change_pct)
 
         append_list(updates, "{} \t".format(ticker), tabsize=11)
