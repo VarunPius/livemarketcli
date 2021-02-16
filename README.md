@@ -10,7 +10,7 @@ pip install .
 ```
 or
 ```
-Python setup.py install
+python setup.py install
 ```
 
 # Running the application
