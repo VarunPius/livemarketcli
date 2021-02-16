@@ -1,7 +1,7 @@
 #####################################################################
 # Author      : Varun Pius Rodrigues                               ##
-# File        : carrack.py                                         ##
-# Description : Main program                                       ##
+# File        : tracker.py                                         ##
+# Description : Implementation to fetch values and process data    ##
 #####################################################################
 
 # Standard Packages
@@ -10,10 +10,14 @@ import json
 # External Packages
 import click
 import requests
-import yfinance as yf
 
 # Project Packages:
 import lib.auth as auth
+
+
+################################################################################
+# Program starts here
+################################################################################
 
 def arg_preprocessing(ticker_list):
     ticker_str = ""
@@ -59,12 +63,15 @@ def get_price(stock_data_dict):
 def track_market(ticker_list):
     source = 'alphavantage'
     ticker_str = arg_preprocessing(ticker_list)
-    print(ticker_str)
+    #print(ticker_str)
     stock_data_dict = get_data(ticker_str)
     price_dict = get_price(stock_data_dict)
     return price_dict
 
 
+################################################################################
+# Rough
+################################################################################
 
 """
     #apikey = auth.get_api_key(source)

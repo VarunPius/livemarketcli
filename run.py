@@ -4,8 +4,8 @@
 # Description : Main program                                       ##
 #####################################################################
 
+# Standard Packages
 import argparse
-import click
 
 # Project Packages:
 import lib.ui as ui
@@ -17,8 +17,7 @@ def main():
     arg_parser.add_argument('--ticker', '-t', help='Enter list of stocks', nargs='+', default=['VOO', 'VTI']) # nargs = + for variable arguments
     args = arg_parser.parse_args()
     ticker = args.ticker
-    print(ticker)
-    price_dict = tracker.track_market(ticker)
-    print(price_dict)
-    ui.main(price_dict)
-    #ui.main()
+    #print(ticker)
+    #price_dict = tracker.track_market(ticker)
+    #print(price_dict)
+    ui.main(ticker)
