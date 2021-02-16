@@ -1,5 +1,5 @@
 # Live Market CLI
-<a target="_blank" href="https://opensource.org/licenses/MIT" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a> <a target="_blank" href="http://makeapullrequest.com" title="PRs Welcome"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"></a> ![version](https://img.shields.io/badge/version-2.1.1-blue)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)] [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![version](https://img.shields.io/badge/version-2.1.1-blue)
 
 This application is to track live stock market prices from the convenience of a command line. This makes it easier to keep track of some stocks in your watchlist live rather than having to refresh your browser over and over again.
 
