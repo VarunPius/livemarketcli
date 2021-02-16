@@ -20,18 +20,5 @@ def main():
     print(ticker)
     price_dict = tracker.track_market(ticker)
     print(price_dict)
-    #ui.main(price_dict)
+    ui.main(price_dict)
     #ui.main()
-
-
-"""
-@click.command()
-@click.option(
-    '--ticker',
-    '-t',
-    default='VOO,VTI',
-    help='Enter list of stocks')
-def main(ticker):
-    print("Hello")
-    print(ticker)
-    """
