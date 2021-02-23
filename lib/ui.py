@@ -69,6 +69,8 @@ def format_positive_number(num):
 
 def get_color(num):
     num_color = "num "
+    if not num:
+        return num_color
     if num < 0:
         num_color += "negative"
     return num_color

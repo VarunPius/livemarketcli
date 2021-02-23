@@ -6,8 +6,9 @@ def get_data(ticker_str):
     getData = requests.get(url)
     requests_data = getData.json() # json.loads(getData.text)
 
-    print(requests_data)
+    print(requests_data['quoteResponse']['result'])
 
     return
 
-get_data("AAPL,MSFT")
+#get_data("AAPL,MSFT")
+get_data("CRIS")
