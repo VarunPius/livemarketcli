@@ -21,6 +21,8 @@ import lib.auth as auth
 
 def arg_preprocessing(ticker_list):
     ticker_str = ""
+    # alternatively, you can do this: 
+    # ticker_str = ",".join(ticker_list)
     for ticker in ticker_list:
         ticker_str += ticker.upper() + ","
 
